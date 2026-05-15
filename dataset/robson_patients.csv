@@ -1,0 +1,501 @@
+patientName,age,weight,height,gravida,parity,previousLSCS,previousCSCount,gestationalAge,numberOfFetuses,fetalLie,presentation,labourType,deliveryTiming,diabetes,hypertension
+Bhavya_1,29,93,152,2,1,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Swathi_2,24,79,170,4,3,false,0,39,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Pooja_3,36,91,171,4,3,true,2,35,Multiple,Transverse,Transverse,Induced,In Labour,false,false
+Mounika_4,39,52,152,4,2,false,0,38,Single,Longitudinal,Breech,No Labour,Pre Labour CS,true,true
+Keerthi_5,39,74,163,4,3,false,0,41,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Kavya_6,33,77,171,2,0,false,0,34,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Divya_7,25,78,161,3,2,true,2,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Deepika_8,21,82,159,3,1,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Tejaswini_9,19,89,163,5,3,false,0,36,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Kavya_10,37,61,163,3,1,true,1,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Manasa_11,19,85,161,3,1,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lakshmi_12,36,67,167,2,0,false,0,35,Single,Oblique,Oblique,Induced,In Labour,false,false
+Anitha_13,33,49,168,3,2,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Swathi_14,33,67,170,4,3,false,0,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_15,31,49,154,4,3,false,0,38,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,false
+Deepika_16,34,53,167,3,1,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lakshmi_17,26,53,162,3,2,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Pooja_18,33,79,157,1,0,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Divya_19,24,95,168,4,3,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Sandhya_20,38,47,152,3,1,true,2,41,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Tejaswini_21,23,50,165,1,0,false,0,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Tejaswini_22,21,79,156,3,2,false,0,34,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Meena_23,33,89,169,1,0,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Tejaswini_24,38,83,166,4,2,true,1,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Lakshmi_25,35,48,149,2,0,false,0,36,Single,Transverse,Transverse,Spontaneous,In Labour,false,false
+Lavanya_26,31,94,160,3,1,false,0,40,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Manasa_27,37,62,168,3,2,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_28,26,50,171,4,3,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Anitha_29,39,73,164,2,1,false,0,35,Single,Longitudinal,Breech,Spontaneous,In Labour,false,false
+Priya_30,19,46,149,5,3,true,1,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Sandhya_31,27,54,145,3,1,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Kavya_32,38,59,146,2,1,false,0,39,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Meena_33,31,83,156,2,1,false,0,40,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Keerthi_34,24,73,150,4,3,true,2,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Priya_35,31,55,169,2,1,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Rani_36,36,79,150,4,3,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Rani_37,20,60,167,4,2,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Lavanya_38,27,53,159,1,0,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Swathi_39,23,73,149,4,3,false,0,38,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Nandini_40,33,46,147,2,1,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Anitha_41,29,81,158,3,2,false,0,38,Single,Longitudinal,Breech,Spontaneous,In Labour,false,true
+Lavanya_42,26,63,157,5,3,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sravani_43,36,59,147,5,3,false,0,36,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Divya_44,30,88,162,5,3,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Deepika_45,19,65,167,4,3,false,0,36,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Meena_46,32,79,164,3,1,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_47,31,92,148,3,1,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Rani_48,37,83,153,3,2,false,0,36,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Harika_49,29,70,154,1,0,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Priya_50,21,67,167,2,1,false,0,37,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Rani_51,36,87,161,1,0,false,0,40,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Keerthi_52,23,71,158,5,3,false,0,39,Single,Longitudinal,Breech,Spontaneous,In Labour,false,false
+Kavya_53,35,58,159,4,2,false,0,39,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Kavya_54,33,53,150,4,3,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_55,23,62,172,5,3,false,0,35,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Nandini_56,41,83,165,3,1,true,1,39,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Tejaswini_57,19,80,155,4,3,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Rani_58,27,93,146,5,3,false,0,41,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lavanya_59,30,61,160,2,1,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Deepika_60,28,73,159,1,0,false,0,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Lavanya_61,38,70,170,2,0,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Divya_62,37,48,172,5,3,false,0,34,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sravani_63,41,48,153,2,0,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Deepika_64,24,84,150,1,0,false,0,38,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Swathi_65,42,45,159,4,2,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_66,40,76,168,1,0,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Tejaswini_67,39,62,146,5,3,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Rani_68,36,94,150,3,1,true,1,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Rani_69,21,69,156,2,1,true,1,40,Single,Oblique,Oblique,Induced,In Labour,false,false
+Lakshmi_70,35,90,165,4,3,false,0,38,Single,Longitudinal,Breech,Induced,In Labour,true,false
+Sandhya_71,27,48,171,2,0,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Mounika_72,27,58,167,3,2,false,0,39,Single,Transverse,Transverse,Spontaneous,In Labour,false,false
+Swathi_73,40,81,169,4,2,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Tejaswini_74,25,55,161,3,1,true,2,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_75,20,67,148,2,0,false,0,36,Single,Oblique,Oblique,No Labour,Pre Labour CS,true,false
+Keerthi_76,26,92,158,1,0,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Sravani_77,21,52,145,3,1,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Tejaswini_78,21,51,147,2,0,false,0,40,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Pooja_79,42,73,158,2,0,false,0,37,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Sravani_80,22,53,172,3,1,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_81,23,88,169,2,1,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Swathi_82,21,45,162,3,2,true,1,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Bhavya_83,27,81,158,4,3,false,0,36,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Keerthi_84,21,84,171,4,3,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sravani_85,23,51,158,4,3,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Meena_86,27,50,145,5,3,true,1,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Priya_87,38,87,149,3,1,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Mounika_88,33,95,154,4,3,true,2,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Rani_89,26,65,145,2,0,false,0,36,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Divya_90,39,46,156,5,3,true,2,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Tejaswini_91,25,80,163,4,3,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Kavya_92,23,73,170,4,2,true,1,38,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Deepika_93,40,49,158,3,1,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Keerthi_94,24,60,170,3,1,true,2,39,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Bhavya_95,40,61,148,2,1,false,0,37,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Priya_96,24,89,159,2,1,false,0,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Harika_97,31,82,159,3,1,false,0,39,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Lavanya_98,26,54,146,4,2,true,2,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lavanya_99,22,77,158,4,2,false,0,41,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Rani_100,23,48,165,2,1,false,0,39,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,true
+Swathi_101,37,54,145,3,1,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Mounika_102,20,69,150,2,1,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Pooja_103,30,77,168,3,1,false,0,41,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Deepika_104,19,68,156,1,0,false,0,40,Single,Longitudinal,Breech,Spontaneous,In Labour,false,true
+Pooja_105,26,68,151,4,3,false,0,36,Single,Transverse,Transverse,Spontaneous,In Labour,true,false
+Tejaswini_106,28,69,146,5,3,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Harika_107,29,46,167,4,3,false,0,36,Single,Longitudinal,Breech,No Labour,Pre Labour CS,true,true
+Divya_108,29,82,166,1,0,false,0,39,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Mounika_109,35,91,151,1,0,false,0,38,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Rani_110,20,90,151,2,1,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_111,35,51,152,3,2,true,2,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Lakshmi_112,30,75,146,2,1,false,0,34,Single,Longitudinal,Breech,Spontaneous,In Labour,false,false
+Lavanya_113,36,78,163,2,0,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Anitha_114,27,95,168,5,3,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Rani_115,39,60,155,2,0,false,0,39,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Deepika_116,23,78,146,2,1,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Anitha_117,32,88,161,1,0,false,0,36,Single,Transverse,Transverse,Spontaneous,In Labour,false,false
+Mounika_118,37,73,171,2,0,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Sandhya_119,23,75,145,3,1,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sravani_120,32,48,159,3,2,false,0,37,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sandhya_121,28,65,166,3,1,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Mounika_122,38,53,172,4,2,true,1,36,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,false
+Harika_123,38,86,156,5,3,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Harika_124,39,51,160,3,2,false,0,40,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Tejaswini_125,37,85,161,3,2,true,2,35,Multiple,Transverse,Transverse,Spontaneous,In Labour,true,false
+Tejaswini_126,21,95,162,3,1,false,0,37,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Sravani_127,19,78,159,3,1,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Priya_128,34,72,158,2,1,false,0,39,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Sandhya_129,25,91,146,1,0,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Pooja_130,24,66,160,4,2,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Nandini_131,21,68,148,2,1,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Meena_132,35,68,169,2,0,false,0,37,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lavanya_133,34,76,151,3,2,true,2,34,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_134,40,70,168,3,2,true,1,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Divya_135,38,78,158,4,3,true,2,35,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lakshmi_136,21,62,168,3,2,false,0,34,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,false
+Lavanya_137,25,48,146,3,1,false,0,41,Single,Longitudinal,Breech,Spontaneous,In Labour,false,false
+Keerthi_138,37,87,165,4,3,false,0,37,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,true
+Keerthi_139,20,95,150,4,3,true,2,34,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,false
+Meena_140,29,82,159,2,0,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Deepika_141,35,70,145,3,1,true,2,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Divya_142,21,53,156,3,1,false,0,39,Single,Oblique,Oblique,Spontaneous,In Labour,false,false
+Lakshmi_143,39,85,156,1,0,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Bhavya_144,31,81,162,3,2,false,0,37,Single,Transverse,Transverse,Induced,In Labour,false,false
+Bhavya_145,42,79,169,5,3,false,0,41,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,false
+Rani_146,28,88,149,5,3,false,0,39,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Bhavya_147,30,57,148,2,0,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sravani_148,32,77,156,2,0,false,0,41,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Bhavya_149,34,53,153,4,3,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Deepika_150,29,53,151,5,3,false,0,36,Single,Transverse,Transverse,Induced,In Labour,false,false
+Priya_151,42,65,168,2,0,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Anitha_152,36,69,168,4,2,true,2,41,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Keerthi_153,41,54,168,3,2,true,1,39,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Lavanya_154,38,59,155,3,1,true,2,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Anitha_155,27,56,157,4,2,false,0,35,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,false
+Lakshmi_156,33,65,150,5,3,false,0,38,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Bhavya_157,42,72,165,2,1,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Nandini_158,24,81,157,1,0,false,0,36,Single,Longitudinal,Breech,No Labour,Pre Labour CS,true,true
+Harika_159,25,70,162,2,0,false,0,39,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Swathi_160,36,70,166,2,1,true,1,35,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,false
+Manasa_161,34,73,146,4,2,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Lakshmi_162,20,70,170,1,0,false,0,39,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Manasa_163,31,80,171,1,0,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Sandhya_164,30,46,150,3,1,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Divya_165,27,52,160,5,3,true,2,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Keerthi_166,38,68,147,3,1,true,2,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Manasa_167,28,45,169,2,1,false,0,41,Single,Longitudinal,Breech,Spontaneous,In Labour,false,false
+Harika_168,32,66,151,4,2,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Keerthi_169,35,90,151,2,0,false,0,37,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Priya_170,26,85,160,2,1,true,2,34,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Pooja_171,28,63,154,2,0,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Manasa_172,27,69,150,4,3,true,1,38,Single,Oblique,Oblique,Induced,In Labour,true,true
+Meena_173,32,92,149,1,0,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Lakshmi_174,29,85,162,1,0,false,0,39,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lavanya_175,21,58,171,5,3,true,1,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Sandhya_176,28,80,167,4,3,false,0,38,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Meena_177,29,65,150,1,0,false,0,37,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,false
+Anitha_178,25,84,170,2,0,false,0,40,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Manasa_179,35,71,145,1,0,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Meena_180,23,55,167,4,2,true,2,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Keerthi_181,36,77,168,3,1,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Bhavya_182,24,53,162,4,2,true,2,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Lakshmi_183,29,72,171,2,0,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Swathi_184,35,77,165,3,2,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Lakshmi_185,38,86,162,2,1,false,0,40,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,true
+Meena_186,21,60,170,1,0,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Manasa_187,29,80,167,1,0,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Meena_188,27,91,154,4,2,true,1,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Pooja_189,40,60,172,1,0,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Kavya_190,26,94,157,4,2,false,0,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_191,42,89,146,2,0,false,0,39,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Swathi_192,38,89,148,1,0,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Meena_193,25,49,166,4,3,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Mounika_194,19,93,154,2,0,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Swathi_195,37,95,149,4,2,true,1,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Sandhya_196,26,60,146,2,1,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Deepika_197,30,56,148,1,0,false,0,40,Single,Oblique,Oblique,Induced,In Labour,false,false
+Nandini_198,26,94,165,2,0,false,0,34,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Divya_199,24,91,166,5,3,false,0,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Mounika_200,19,73,171,2,1,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Keerthi_201,27,63,163,2,1,false,0,37,Multiple,Transverse,Transverse,No Labour,Pre Labour CS,true,false
+Keerthi_202,21,83,153,3,2,true,2,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Deepika_203,42,47,158,2,0,false,0,37,Single,Oblique,Oblique,Spontaneous,In Labour,false,false
+Meena_204,19,88,167,2,0,false,0,40,Single,Transverse,Transverse,Spontaneous,In Labour,false,false
+Mounika_205,23,84,161,5,3,false,0,40,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Divya_206,42,82,151,3,1,false,0,38,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Bhavya_207,34,51,146,3,1,false,0,34,Multiple,Transverse,Transverse,No Labour,Pre Labour CS,true,false
+Kavya_208,34,94,168,3,1,false,0,37,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,false
+Keerthi_209,23,55,147,4,3,false,0,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Nandini_210,23,56,147,2,0,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Meena_211,40,72,167,1,0,false,0,34,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,true
+Mounika_212,29,62,161,2,0,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Tejaswini_213,42,51,163,4,2,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Priya_214,38,58,158,1,0,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Priya_215,25,65,169,1,0,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_216,41,67,157,3,1,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Bhavya_217,33,62,153,2,1,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Anitha_218,36,94,170,3,1,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Bhavya_219,38,51,152,1,0,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Mounika_220,29,72,147,3,1,true,1,41,Single,Transverse,Transverse,Induced,In Labour,false,false
+Sandhya_221,33,59,154,2,0,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Nandini_222,34,67,152,4,2,true,2,36,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Mounika_223,23,54,155,5,3,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Lakshmi_224,25,70,159,4,3,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,true
+Mounika_225,25,88,168,3,1,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Keerthi_226,26,53,150,2,0,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Swathi_227,26,72,149,4,2,false,0,39,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Mounika_228,41,79,160,4,2,true,1,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Sandhya_229,25,60,151,5,3,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Priya_230,35,89,164,2,0,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Lavanya_231,25,50,167,4,3,false,0,38,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Meena_232,41,50,156,4,2,true,2,41,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Divya_233,24,85,151,3,2,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Sravani_234,19,59,168,4,2,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Divya_235,21,67,150,1,0,false,0,41,Multiple,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Lavanya_236,27,66,152,3,2,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Rani_237,40,93,163,4,2,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Pooja_238,19,64,162,4,2,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Lakshmi_239,21,49,157,2,1,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Meena_240,22,81,151,4,2,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,true
+Meena_241,25,54,160,3,2,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lakshmi_242,30,80,150,3,2,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Anitha_243,38,88,146,1,0,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Manasa_244,28,95,153,1,0,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Divya_245,22,91,154,4,2,false,0,39,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Harika_246,22,84,166,3,2,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_247,34,64,169,4,2,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Deepika_248,21,80,152,3,2,false,0,35,Single,Longitudinal,Breech,Spontaneous,In Labour,false,false
+Mounika_249,21,75,146,2,1,false,0,41,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sandhya_250,34,62,163,3,1,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Deepika_251,37,76,153,3,1,true,1,36,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_252,42,45,160,3,2,true,1,39,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Tejaswini_253,19,91,156,4,3,false,0,38,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sravani_254,24,77,164,3,1,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Manasa_255,28,77,169,3,2,true,2,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sandhya_256,24,91,145,4,3,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Lakshmi_257,31,83,159,3,2,false,0,38,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Sravani_258,37,72,162,4,3,false,0,34,Multiple,Longitudinal,Breech,Spontaneous,In Labour,false,true
+Keerthi_259,26,95,152,5,3,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Anitha_260,42,73,152,5,3,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Harika_261,28,92,170,1,0,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Nandini_262,22,68,167,2,1,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Meena_263,26,67,147,2,1,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_264,34,62,156,3,2,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Tejaswini_265,35,86,160,3,1,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Nandini_266,40,72,164,2,0,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Tejaswini_267,37,45,156,4,2,true,2,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Divya_268,27,93,172,2,0,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Kavya_269,32,83,152,3,1,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Sandhya_270,40,68,151,3,2,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Priya_271,20,73,149,2,1,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Keerthi_272,23,85,162,2,1,true,2,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Kavya_273,27,80,161,5,3,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Priya_274,36,82,147,1,0,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Lakshmi_275,24,86,167,3,2,true,1,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Sandhya_276,31,72,168,4,2,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Pooja_277,26,55,151,3,1,false,0,41,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Sandhya_278,22,77,170,4,2,false,0,35,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,false
+Priya_279,39,63,156,2,0,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Rani_280,40,46,163,3,2,true,2,38,Single,Longitudinal,Cephalic,Induced,In Labour,true,true
+Mounika_281,39,67,145,1,0,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Rani_282,31,66,168,3,2,false,0,39,Single,Longitudinal,Breech,No Labour,Pre Labour CS,true,false
+Priya_283,34,92,166,5,3,false,0,36,Single,Transverse,Transverse,Induced,In Labour,false,false
+Kavya_284,26,54,156,1,0,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Pooja_285,35,66,167,2,1,true,2,38,Single,Transverse,Transverse,Induced,In Labour,false,false
+Tejaswini_286,39,76,169,2,0,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Deepika_287,42,70,152,2,1,true,2,35,Single,Longitudinal,Breech,Induced,In Labour,false,true
+Lakshmi_288,32,95,145,4,3,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Swathi_289,26,77,170,3,2,false,0,37,Single,Longitudinal,Breech,Spontaneous,In Labour,false,false
+Meena_290,39,92,153,3,2,true,1,39,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,true
+Lavanya_291,27,47,161,2,0,false,0,39,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Nandini_292,21,79,153,3,2,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Swathi_293,37,53,155,4,3,false,0,41,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sravani_294,29,53,166,5,3,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Deepika_295,22,49,163,3,2,true,1,35,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Swathi_296,34,59,171,3,1,true,1,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Mounika_297,24,48,149,4,2,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Mounika_298,24,53,167,2,0,false,0,38,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_299,40,67,170,1,0,false,0,40,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Harika_300,38,49,171,4,2,false,0,39,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,true
+Harika_301,36,83,150,2,1,false,0,36,Single,Transverse,Transverse,Induced,In Labour,false,false
+Nandini_302,42,55,171,2,1,true,1,34,Single,Oblique,Oblique,Spontaneous,In Labour,false,true
+Manasa_303,36,66,150,2,1,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Anitha_304,21,77,152,3,2,true,2,40,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Swathi_305,36,91,164,1,0,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Mounika_306,36,87,163,4,3,true,1,41,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Divya_307,32,67,164,1,0,false,0,34,Single,Longitudinal,Breech,Induced,In Labour,true,false
+Sandhya_308,40,72,167,1,0,false,0,39,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Swathi_309,32,52,157,3,1,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Harika_310,38,66,157,2,1,true,1,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Lavanya_311,33,49,159,2,0,false,0,40,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,false
+Priya_312,38,91,149,1,0,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Sravani_313,40,80,149,4,3,true,2,40,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Sravani_314,42,87,165,2,0,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Tejaswini_315,34,60,159,1,0,false,0,39,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Manasa_316,36,93,153,3,1,true,1,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Sravani_317,38,93,162,4,3,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lavanya_318,32,87,145,2,0,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Deepika_319,42,58,160,4,3,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Lavanya_320,23,62,162,2,1,false,0,39,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Swathi_321,30,63,162,4,3,false,0,34,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Manasa_322,33,83,163,3,1,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Sandhya_323,20,68,157,5,3,false,0,41,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,false
+Pooja_324,42,59,158,3,2,true,1,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Keerthi_325,37,88,154,3,2,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Lavanya_326,33,50,154,2,0,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,true
+Tejaswini_327,19,57,151,4,2,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Keerthi_328,20,52,154,4,2,false,0,41,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Tejaswini_329,38,47,162,4,2,false,0,40,Single,Transverse,Transverse,Induced,In Labour,false,false
+Lavanya_330,31,79,164,5,3,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Meena_331,25,48,166,2,1,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Bhavya_332,20,47,158,4,2,false,0,36,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Manasa_333,39,95,171,2,1,false,0,39,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Harika_334,27,67,166,3,2,true,2,36,Single,Oblique,Oblique,Induced,In Labour,false,false
+Swathi_335,38,57,156,2,1,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Harika_336,42,62,164,1,0,false,0,41,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Meena_337,23,63,170,2,0,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Lavanya_338,25,48,148,3,1,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Divya_339,37,85,160,4,3,false,0,39,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Rani_340,23,81,162,5,3,false,0,39,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Priya_341,25,54,155,2,0,false,0,38,Multiple,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Divya_342,32,47,157,2,1,false,0,41,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Divya_343,30,49,153,4,2,true,2,39,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Bhavya_344,22,80,166,2,0,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Sandhya_345,28,54,167,4,3,false,0,41,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Meena_346,39,71,167,1,0,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Tejaswini_347,20,49,148,2,1,false,0,38,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lavanya_348,22,46,152,3,1,false,0,40,Single,Transverse,Transverse,Spontaneous,In Labour,false,false
+Bhavya_349,38,51,167,1,0,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Lavanya_350,39,61,163,3,1,true,1,39,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,false
+Sravani_351,19,62,147,1,0,false,0,39,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lavanya_352,34,76,166,5,3,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Anitha_353,34,55,160,2,0,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Sandhya_354,34,58,156,1,0,false,0,39,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Lavanya_355,35,78,146,3,2,true,2,40,Single,Longitudinal,Breech,Spontaneous,In Labour,false,false
+Lakshmi_356,37,88,150,4,3,false,0,35,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Divya_357,30,93,149,1,0,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Sandhya_358,25,84,145,5,3,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Manasa_359,32,77,150,1,0,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Mounika_360,35,49,162,2,0,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Mounika_361,39,87,164,4,3,false,0,39,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Tejaswini_362,31,81,157,2,1,true,2,38,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Kavya_363,42,86,145,2,1,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Lakshmi_364,38,89,167,2,1,false,0,39,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Pooja_365,27,83,171,2,0,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_366,35,90,147,3,2,false,0,40,Single,Longitudinal,Breech,Induced,In Labour,false,true
+Swathi_367,40,46,158,3,1,false,0,39,Single,Transverse,Transverse,Induced,In Labour,true,true
+Lakshmi_368,38,59,163,2,0,false,0,37,Single,Oblique,Oblique,Induced,In Labour,false,false
+Meena_369,37,71,155,5,3,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_370,33,91,151,2,1,false,0,41,Single,Transverse,Transverse,Induced,In Labour,false,false
+Kavya_371,42,72,168,5,3,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Divya_372,20,50,151,5,3,false,0,40,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,true
+Kavya_373,38,63,160,2,0,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Pooja_374,23,48,161,1,0,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Kavya_375,41,57,152,5,3,false,0,34,Single,Oblique,Oblique,Spontaneous,In Labour,true,false
+Rani_376,33,56,163,4,2,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Anitha_377,31,74,163,2,0,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Priya_378,31,45,164,4,2,true,2,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Mounika_379,23,90,166,2,1,false,0,38,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Priya_380,38,49,160,3,2,false,0,40,Single,Oblique,Oblique,Induced,In Labour,true,false
+Anitha_381,33,92,161,3,2,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Rani_382,22,79,171,5,3,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_383,29,70,172,1,0,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Deepika_384,23,69,164,1,0,false,0,38,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Meena_385,28,67,155,2,1,false,0,35,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,true
+Anitha_386,25,74,155,2,0,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Harika_387,29,68,169,1,0,false,0,36,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Deepika_388,41,48,162,4,3,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Swathi_389,31,47,156,3,1,false,0,38,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Priya_390,30,68,168,2,0,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Meena_391,19,66,171,3,1,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Lakshmi_392,41,62,170,4,2,true,1,40,Single,Longitudinal,Breech,Induced,In Labour,false,true
+Meena_393,42,54,154,2,0,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Deepika_394,36,94,171,4,3,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Priya_395,35,70,156,1,0,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Bhavya_396,25,50,155,5,3,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Priya_397,21,54,148,2,1,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Manasa_398,20,46,147,5,3,false,0,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Keerthi_399,26,72,168,4,3,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Mounika_400,36,58,158,3,1,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Priya_401,35,84,146,2,1,false,0,35,Single,Oblique,Oblique,Induced,In Labour,false,false
+Mounika_402,40,78,165,3,2,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Swathi_403,25,84,149,3,2,true,2,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Deepika_404,22,80,149,2,0,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Manasa_405,41,56,146,2,0,false,0,34,Single,Transverse,Transverse,Spontaneous,In Labour,false,false
+Bhavya_406,42,78,151,3,1,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Keerthi_407,29,79,157,2,0,false,0,38,Multiple,Oblique,Oblique,Spontaneous,In Labour,false,false
+Sandhya_408,34,85,157,4,2,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Anitha_409,23,63,150,2,1,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Keerthi_410,24,88,155,4,2,false,0,35,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Keerthi_411,42,54,163,3,1,false,0,41,Single,Longitudinal,Breech,Induced,In Labour,false,false
+Priya_412,34,76,168,5,3,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Mounika_413,19,56,154,5,3,false,0,41,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Keerthi_414,33,60,162,4,3,true,1,39,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Harika_415,40,89,168,2,0,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Harika_416,27,90,166,3,1,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Priya_417,34,71,148,5,3,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Meena_418,24,57,164,3,1,true,1,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Deepika_419,25,60,160,2,0,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Priya_420,27,81,150,4,3,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Priya_421,38,63,145,1,0,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Priya_422,33,85,163,5,3,true,1,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Mounika_423,20,52,170,4,2,true,2,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Deepika_424,22,55,160,5,3,true,2,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Nandini_425,19,62,153,5,3,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Swathi_426,21,48,161,2,0,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Priya_427,24,77,158,4,3,true,1,37,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Sandhya_428,21,78,147,2,1,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,true
+Meena_429,39,69,172,1,0,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Anitha_430,26,80,148,2,0,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Manasa_431,24,63,158,4,3,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Sravani_432,20,67,146,4,2,false,0,34,Multiple,Transverse,Transverse,Spontaneous,In Labour,true,false
+Deepika_433,22,49,159,2,0,false,0,38,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Keerthi_434,19,85,163,2,1,true,1,40,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Priya_435,19,54,159,2,0,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Bhavya_436,24,46,166,3,2,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Anitha_437,41,66,151,5,3,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_438,32,84,145,2,1,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,true,true
+Manasa_439,40,85,169,3,2,true,2,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lakshmi_440,31,90,148,4,3,false,0,36,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Sravani_441,35,74,159,1,0,false,0,37,Single,Transverse,Transverse,Induced,In Labour,false,true
+Bhavya_442,30,60,150,3,2,true,1,39,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Harika_443,37,93,148,5,3,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Bhavya_444,31,93,161,4,3,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Lakshmi_445,31,80,165,4,3,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Anitha_446,27,59,147,5,3,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Lavanya_447,20,58,147,4,2,false,0,39,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Swathi_448,26,94,148,5,3,true,1,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Harika_449,27,56,145,4,2,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Meena_450,37,53,159,2,1,false,0,40,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Pooja_451,35,94,154,2,0,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,true,false
+Swathi_452,25,51,162,1,0,false,0,35,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Pooja_453,27,50,164,5,3,false,0,37,Single,Longitudinal,Breech,Spontaneous,In Labour,false,false
+Meena_454,34,51,152,3,2,true,1,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Deepika_455,20,89,149,2,0,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Rani_456,21,57,154,3,2,false,0,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Sravani_457,22,92,167,2,1,false,0,38,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Priya_458,23,70,155,4,2,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Sravani_459,42,49,171,1,0,false,0,41,Multiple,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Nandini_460,37,91,170,2,1,false,0,41,Single,Oblique,Oblique,No Labour,Pre Labour CS,false,false
+Mounika_461,26,69,172,4,2,false,0,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Swathi_462,31,52,157,2,1,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Mounika_463,24,80,163,4,3,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Tejaswini_464,23,85,162,4,2,false,0,37,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Tejaswini_465,19,94,154,2,1,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Kavya_466,29,75,164,4,2,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Lakshmi_467,20,75,148,4,2,false,0,38,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Nandini_468,36,75,167,2,0,false,0,36,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Harika_469,32,90,166,1,0,false,0,40,Single,Transverse,Transverse,No Labour,Pre Labour CS,true,true
+Deepika_470,38,59,158,3,1,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Kavya_471,29,66,152,1,0,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Priya_472,37,71,162,5,3,true,1,34,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Divya_473,19,52,158,3,2,false,0,38,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Tejaswini_474,39,83,153,3,2,false,0,38,Single,Transverse,Transverse,Induced,In Labour,false,false
+Bhavya_475,33,68,153,3,1,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Sravani_476,21,90,153,2,1,false,0,36,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,true
+Meena_477,33,86,168,3,2,false,0,37,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Deepika_478,33,77,161,4,3,true,1,41,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Pooja_479,40,49,146,2,1,false,0,34,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Divya_480,25,78,148,4,2,false,0,41,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Bhavya_481,38,72,169,5,3,true,1,36,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Lakshmi_482,35,49,163,3,2,false,0,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Priya_483,27,72,170,5,3,false,0,37,Single,Transverse,Transverse,Spontaneous,In Labour,false,false
+Sravani_484,20,77,150,3,1,false,0,36,Multiple,Longitudinal,Cephalic,Induced,In Labour,false,false
+Pooja_485,26,72,170,1,0,false,0,37,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Meena_486,32,87,160,3,1,false,0,38,Single,Longitudinal,Breech,No Labour,Pre Labour CS,false,false
+Nandini_487,20,84,152,2,1,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Rani_488,23,92,169,3,2,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Tejaswini_489,31,81,169,3,2,true,1,35,Multiple,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Nandini_490,28,65,146,4,3,false,0,41,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
+Tejaswini_491,20,93,167,2,0,false,0,35,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,true,false
+Kavya_492,32,82,150,4,3,false,0,40,Single,Transverse,Transverse,Spontaneous,In Labour,true,true
+Sandhya_493,32,93,145,2,0,false,0,40,Single,Transverse,Transverse,No Labour,Pre Labour CS,false,false
+Kavya_494,28,95,159,3,1,true,2,40,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,true
+Mounika_495,26,57,150,1,0,false,0,35,Single,Longitudinal,Cephalic,Induced,In Labour,false,false
+Kavya_496,35,79,145,3,1,false,0,35,Single,Longitudinal,Cephalic,Spontaneous,In Labour,true,false
+Keerthi_497,24,94,169,1,0,false,0,40,Single,Longitudinal,Cephalic,Induced,In Labour,false,true
+Meena_498,35,47,170,3,2,false,0,40,Single,Transverse,Transverse,Induced,In Labour,false,false
+Nandini_499,20,76,158,2,1,false,0,41,Single,Longitudinal,Cephalic,Spontaneous,In Labour,false,false
+Pooja_500,39,92,148,4,2,false,0,34,Single,Longitudinal,Cephalic,No Labour,Pre Labour CS,false,false
