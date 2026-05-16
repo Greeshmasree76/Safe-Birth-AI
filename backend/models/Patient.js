@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 
 const patientSchema = new mongoose.Schema(
   {
+    facilityName: {
+      type: String,
+      default: "SafeBirth Main Hospital",
+    },
+
     patientName: {
       type: String,
       required: true,
@@ -99,9 +104,59 @@ const patientSchema = new mongoose.Schema(
       type: Number,
     },
 
+    mlConfidence: {
+      type: Number,
+    },
+
+    predictionSource: {
+      type: String,
+      default: "Rule-based fallback",
+    },
+
     outcome: {
       type: String,
       default: "Pending",
+    },
+
+    actualDeliveryOutcome: {
+      type: String,
+      enum: ["Pending", "Normal", "C-Section"],
+      default: "Pending",
+    },
+
+    maternalComplications: {
+      type: Boolean,
+      default: false,
+    },
+
+    neonatalComplications: {
+      type: Boolean,
+      default: false,
+    },
+
+    nicuAdmission: {
+      type: Boolean,
+      default: false,
+    },
+
+    apgarScore: {
+      type: Number,
+      default: null,
+    },
+
+    postpartumHemorrhage: {
+      type: Boolean,
+      default: false,
+    },
+
+    stillbirth: {
+      type: Boolean,
+      default: false,
+    },
+
+    outcomeNotes: {
+      type: String,
+      default: "",
     },
   },
   {

@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 
 const connectDB = require("./config/db");
 const patientRoutes = require("./routes/patientRoutes");
+const interventionRoutes = require("./routes/interventionRoutes");
 
 dotenv.config();
 
@@ -19,9 +20,14 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/patients", patientRoutes);
+app.use("/api/interventions", interventionRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on ${PORT}`);
+  });
+}
+
+module.exports = app;

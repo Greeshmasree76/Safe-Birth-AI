@@ -1,283 +1,279 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
+import {
+  ResponsiveContainer,
+  ComposedChart,
+  Bar,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  PieChart,
+  Pie,
+  Cell,
+} from "recharts";
 
 import { PATIENTS_API } from "../utils/api";
-import { translations } from "../utils/translations";
+import MetricCard from "../components/MetricCard";
 
-import DashboardCards from "../components/DashboardCards";
-import Charts from "../components/Charts";
-import HighRiskAlert from "../components/HighRiskAlert";
-
-export default function Dashboard({ language }) {
-  const t = translations[language];
-
-  const [formData, setFormData] = useState({
-    patientName: "",
-    age: "",
-    weight: "",
-    height: "",
-    gravida: "",
-    parity: "",
-    previousLSCS: false,
-    previousCSCount: 0,
-    gestationalAge: "",
-    numberOfFetuses: "",
-    fetalLie: "",
-    presentation: "",
-    labourType: "",
-    deliveryTiming: "",
-    diabetes: false,
-    hypertension: false,
-  });
-
+export default function Dashboard() {
   const [patients, setPatients] = useState([]);
-  const [result, setResult] = useState(null);
-  const [alertPatient, setAlertPatient] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  const stats = {
-    total: patients.length,
-    highRisk: patients.filter((p) => p.outcome === "High C-Section Risk")
-      .length,
-    moderate: patients.filter((p) => p.outcome === "Moderate C-Section Risk")
-      .length,
-    normal: patients.filter((p) => p.outcome === "Normal Delivery Likely")
-      .length,
-  };
-
-  const fetchPatients = async () => {
-    try {
-      const res = await axios.get(PATIENTS_API);
-      setPatients(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   useEffect(() => {
-    fetchPatients();
+    axios
+      .get(PATIENTS_API)
+      .then((res) => setPatients(res.data))
+      .catch((err) => console.log(err));
   }, []);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
+  const groupDescriptions = {
+    1: "Nulliparous, single cephalic, ≥37 weeks, spontaneous labour",
+    2: "Nulliparous, single cephalic, ≥37 weeks, induced labour or CS before labour",
+    3: "Multiparous without previous CS, single cephalic, ≥37 weeks, spontaneous labour",
+    4: "Multiparous without previous CS, single cephalic, ≥37 weeks, induced labour or CS before labour",
+    5: "Previous CS, single cephalic, ≥37 weeks",
+    6: "Nulliparous, single breech pregnancy",
+    7: "Multiparous, single breech pregnancy",
+    8: "Multiple pregnancy",
+    9: "Transverse or oblique lie",
+    10: "Single cephalic, <37 weeks",
   };
 
-  const resetForm = () => {
-    setFormData({
-      patientName: "",
-      age: "",
-      weight: "",
-      height: "",
-      gravida: "",
-      parity: "",
-      previousLSCS: false,
-      previousCSCount: 0,
-      gestationalAge: "",
-      numberOfFetuses: "",
-      fetalLie: "",
-      presentation: "",
-      labourType: "",
-      deliveryTiming: "",
-      diabetes: false,
-      hypertension: false,
-    });
-  };
+  const dashboardData = useMemo(() => {
+    const totalBirths = patients.length;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+    const actualCS = patients.filter(
+      (p) => p.actualDeliveryOutcome === "C-Section"
+    ).length;
 
-    try {
-      const res = await axios.post(PATIENTS_API, formData);
+    const predictedCS = patients.filter(
+      (p) => p.outcome === "High C-Section Risk"
+    ).length;
 
-      setResult(res.data);
+    const caesareans = actualCS > 0 ? actualCS : predictedCS;
 
-      if (res.data.outcome === "High C-Section Risk") {
-        setAlertPatient(res.data);
-      }
+    const overallCSRate =
+      totalBirths > 0 ? ((caesareans / totalBirths) * 100).toFixed(1) : 0;
 
-      await fetchPatients();
-      resetForm();
-    } catch (error) {
-      console.log(error);
-      alert(error.response?.data?.message || "Something went wrong");
+    const groupRows = [];
+
+    for (let group = 1; group <= 10; group++) {
+      const groupPatients = patients.filter((p) => p.robsonGroup === group);
+      const groupTotal = groupPatients.length;
+
+      const groupCSActual = groupPatients.filter(
+        (p) => p.actualDeliveryOutcome === "C-Section"
+      ).length;
+
+      const groupPredictedHigh = groupPatients.filter(
+        (p) => p.outcome === "High C-Section Risk"
+      ).length;
+
+      const groupCS = actualCS > 0 ? groupCSActual : groupPredictedHigh;
+
+      const groupSizePercent =
+        totalBirths > 0 ? (groupTotal / totalBirths) * 100 : 0;
+
+      const csRate = groupTotal > 0 ? (groupCS / groupTotal) * 100 : 0;
+
+      groupRows.push({
+        group,
+        groupLabel: `${group}`,
+        description: groupDescriptions[group],
+        births: groupTotal,
+        groupSizePercent: Number(groupSizePercent.toFixed(1)),
+        csCount: groupCS,
+        csRate: Number(csRate.toFixed(1)),
+      });
     }
 
-    setLoading(false);
-  };
+    return {
+      totalBirths,
+      caesareans,
+      overallCSRate,
+      groupRows,
+    };
+  }, [patients]);
+
+  const pieColors = [
+    "#2563eb",
+    "#f97316",
+    "#22c55e",
+    "#ef4444",
+    "#8b5cf6",
+    "#a16207",
+    "#ec4899",
+    "#6b7280",
+    "#eab308",
+    "#06b6d4",
+  ];
+
+  const pieData = dashboardData.groupRows
+    .filter((g) => g.births > 0)
+    .map((g) => ({
+      name: `Group ${g.group}`,
+      value: g.births,
+    }));
 
   return (
-    <div>
-      <HighRiskAlert
-        patient={alertPatient}
-        onClose={() => setAlertPatient(null)}
-      />
+    <div className="space-y-8">
+      <div className="flex justify-between items-start">
+        <div>
+          <h1 className="text-4xl font-bold text-slate-900">Dashboard</h1>
+          <p className="text-slate-500 mt-2">
+            Overview of caesarean section rates using Modified Robson Classification
+          </p>
+        </div>
 
-      <h1 className="text-4xl font-bold text-slate-800">{t.welcome}</h1>
+        <button className="bg-blue-600 text-white px-5 py-3 rounded-xl font-semibold">
+          Select Facility
+        </button>
+      </div>
 
-      <p className="text-gray-500 mb-8">{t.welcomeSub}</p>
+      <div className="grid grid-cols-1 xl:grid-cols-4 gap-6">
+        <MetricCard
+          icon="👥"
+          title="Total births"
+          value={dashboardData.totalBirths}
+          subtitle="Selected period"
+          color="bg-blue-100 text-blue-700"
+        />
 
-      <DashboardCards stats={stats} language={language} />
+        <MetricCard
+          icon="✒️"
+          title="Caesarean sections"
+          value={dashboardData.caesareans}
+          subtitle="Actual CS / predicted high-risk"
+          color="bg-orange-100 text-orange-700"
+        />
 
-      <Charts stats={stats} />
+        <MetricCard
+          icon="◔"
+          title="Overall CS rate"
+          value={`${dashboardData.overallCSRate}%`}
+          subtitle="WHO reference can be configured"
+          color="bg-green-100 text-green-700"
+        />
 
-      <div className="bg-white rounded-3xl shadow-xl p-8 mt-8">
-        <h2 className="text-2xl font-bold mb-6 text-slate-800">
-          {t.newPrediction}
+        <MetricCard
+          icon="☷"
+          title="Robson groups"
+          value="10"
+          subtitle="Groups analysed"
+          color="bg-purple-100 text-purple-700"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 2xl:grid-cols-2 gap-6">
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-900 mb-6">
+            Caesarean section rate by Robson group
+          </h2>
+
+          <div className="h-96">
+            <ResponsiveContainer width="100%" height="100%">
+              <ComposedChart data={dashboardData.groupRows}>
+                <XAxis dataKey="groupLabel" />
+                <YAxis yAxisId="left" />
+                <YAxis yAxisId="right" orientation="right" />
+                <Tooltip />
+                <Legend />
+
+                <Bar
+                  yAxisId="left"
+                  dataKey="groupSizePercent"
+                  name="Group size (%)"
+                  fill="#2563eb"
+                  radius={[8, 8, 0, 0]}
+                />
+
+                <Line
+                  yAxisId="right"
+                  type="monotone"
+                  dataKey="csRate"
+                  name="CS rate (%)"
+                  stroke="#f97316"
+                  strokeWidth={3}
+                />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-900 mb-6">
+            Distribution of births by Robson group
+          </h2>
+
+          <div className="h-96">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={pieData}
+                  dataKey="value"
+                  innerRadius={90}
+                  outerRadius={140}
+                  paddingAngle={2}
+                  label
+                >
+                  {pieData.map((entry, index) => (
+                    <Cell
+                      key={entry.name}
+                      fill={pieColors[index % pieColors.length]}
+                    />
+                  ))}
+                </Pie>
+
+                <Tooltip />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900 mb-6">
+          Robson group summary
         </h2>
 
-        <form
-          onSubmit={handleSubmit}
-          className="grid grid-cols-1 md:grid-cols-2 gap-5"
-        >
-          {[
-            ["patientName", t.patientName, "text"],
-            ["age", t.age, "number"],
-            ["weight", t.weight, "number"],
-            ["height", t.height, "number"],
-            ["gravida", t.gravida, "number"],
-            ["parity", t.parity, "number"],
-            ["previousCSCount", t.previousCSCount, "number"],
-            ["gestationalAge", t.gestationalAge, "number"],
-          ].map(([name, placeholder, type]) => (
-            <input
-              key={name}
-              name={name}
-              type={type}
-              placeholder={placeholder}
-              value={formData[name]}
-              onChange={handleChange}
-              className="border bg-slate-50 p-3 rounded-xl outline-none focus:ring-2 focus:ring-cyan-400"
-              required={name !== "previousCSCount"}
-            />
-          ))}
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead className="bg-slate-100">
+              <tr>
+                <th className="p-3 text-left">Group</th>
+                <th className="p-3 text-left">Description</th>
+                <th className="p-3 text-right">No. of births</th>
+                <th className="p-3 text-right">% of total births</th>
+                <th className="p-3 text-right">CS rate (%)</th>
+              </tr>
+            </thead>
 
-          <select
-            name="numberOfFetuses"
-            value={formData.numberOfFetuses}
-            onChange={handleChange}
-            className="border bg-slate-50 p-3 rounded-xl"
-            required
-          >
-            <option value="">{t.numberOfFetuses}</option>
-            <option value="Single">Single</option>
-            <option value="Multiple">Multiple</option>
-          </select>
+            <tbody>
+              {dashboardData.groupRows.map((row) => (
+                <tr key={row.group} className="border-b hover:bg-slate-50">
+                  <td className="p-3 font-bold text-blue-700">
+                    {row.group}
+                  </td>
+                  <td className="p-3">{row.description}</td>
+                  <td className="p-3 text-right">{row.births}</td>
+                  <td className="p-3 text-right">
+                    {row.groupSizePercent}%
+                  </td>
+                  <td className="p-3 text-right font-semibold">
+                    {row.csRate}%
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-          <select
-            name="fetalLie"
-            value={formData.fetalLie}
-            onChange={handleChange}
-            className="border bg-slate-50 p-3 rounded-xl"
-            required
-          >
-            <option value="">{t.fetalLie}</option>
-            <option value="Longitudinal">Longitudinal</option>
-            <option value="Transverse">Transverse</option>
-            <option value="Oblique">Oblique</option>
-          </select>
-
-          <select
-            name="presentation"
-            value={formData.presentation}
-            onChange={handleChange}
-            className="border bg-slate-50 p-3 rounded-xl"
-            required
-          >
-            <option value="">{t.presentation}</option>
-            <option value="Cephalic">Cephalic</option>
-            <option value="Breech">Breech</option>
-            <option value="Transverse">Transverse</option>
-            <option value="Oblique">Oblique</option>
-          </select>
-
-          <select
-            name="labourType"
-            value={formData.labourType}
-            onChange={handleChange}
-            className="border bg-slate-50 p-3 rounded-xl"
-            required
-          >
-            <option value="">{t.labourType}</option>
-            <option value="Spontaneous">Spontaneous</option>
-            <option value="Induced">Induced</option>
-            <option value="No Labour">No Labour</option>
-          </select>
-
-          <select
-            name="deliveryTiming"
-            value={formData.deliveryTiming}
-            onChange={handleChange}
-            className="border bg-slate-50 p-3 rounded-xl"
-            required
-          >
-            <option value="">{t.deliveryTiming}</option>
-            <option value="In Labour">In Labour</option>
-            <option value="Pre Labour CS">Pre Labour CS</option>
-          </select>
-
-          {[
-            ["previousLSCS", t.previousLSCS],
-            ["diabetes", t.diabetes],
-            ["hypertension", t.hypertension],
-          ].map(([name, label]) => (
-            <label
-              key={name}
-              className="flex gap-2 items-center bg-slate-50 p-3 rounded-xl"
-            >
-              <input
-                type="checkbox"
-                name={name}
-                checked={formData[name]}
-                onChange={handleChange}
-              />
-              {label}
-            </label>
-          ))}
-
-          <button
-            type="submit"
-            disabled={loading}
-            className={`p-3 rounded-xl text-white font-bold transition ${
-              loading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-cyan-500 to-blue-600 hover:scale-[1.01]"
-            }`}
-          >
-            {loading ? t.predicting : t.predict}
-          </button>
-        </form>
-
-        {result && (
-          <div
-            className={`mt-6 p-6 rounded-2xl text-center ${
-              result.outcome === "High C-Section Risk"
-                ? "bg-red-100 text-red-700"
-                : result.outcome === "Moderate C-Section Risk"
-                ? "bg-yellow-100 text-yellow-700"
-                : "bg-emerald-100 text-emerald-700"
-            }`}
-          >
-            <h2 className="text-2xl font-bold">{t.predictionResult}</h2>
-
-            <p className="text-lg mt-2">
-              {t.robsonGroup}:{" "}
-              <span className="font-bold">Group {result.robsonGroup}</span>
-            </p>
-
-            <p className="text-sm mt-2">{result.robsonDescription}</p>
-
-            <p className="text-lg mt-2">
-              {t.riskScore}: <b>{result.riskScore}</b>
-            </p>
-
-            <p className="text-xl mt-2 font-bold">{result.outcome}</p>
-          </div>
+        {patients.length === 0 && (
+          <p className="text-red-500 text-sm mt-4">
+            No patient data available. Add patients from Data Entry page.
+          </p>
         )}
       </div>
     </div>
