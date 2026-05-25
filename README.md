@@ -14,7 +14,39 @@ SafeBirth AI is a deployed full-stack healthcare prototype for C-section risk pr
 - **GitHub Repository:** https://github.com/Greeshmasree76/RiskPrediction
 
 ---
+## Screenshots
 
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Data Entry
+![Data Entry](screenshots/data-entry.png)
+
+### Patient Records
+![Patient Records](screenshots/patient-records.png)
+
+### Analytics
+![Analytics](screenshots/analytics.png)
+
+### Robson Audit
+![Robson Audit](screenshots/robson-audit.png)
+
+### Reports
+![Reports](screenshots/reports.png)
+
+### Export Data
+![Export Data](screenshots/export-data.png)
+
+### Resources
+![Resources](screenshots/resources.png)
+
+### Profile
+![Profile](screenshots/profile.png)
+
+---
 ## Demo Access
 
 The live application includes role-based demo login options directly on the login page.
