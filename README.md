@@ -32,24 +32,18 @@ Each role has different access permissions based on responsibility.
 
 ## Key Features
 
-- Role-based login and access control
+- Role-based login for Admin, Doctor, Nurse/Staff, and Data Analyst
 - Real-time patient data entry
 - Modified Robson group classification
 - ML-based prototype C-section risk prediction
-- Risk score generation
 - High-risk alert popup
 - Patient records dashboard
 - Robson group-wise audit analytics
-- Highest and lowest contributing Robson group detection
-- Benchmark comparison
-- Intervention tracking
-- Actual delivery outcome tracking
-- Care-quality indicators
-- Data quality monitoring
-- PDF report generation
-- CSV and JSON export
+- Benchmark comparison and intervention tracking
+- Actual delivery outcome and care-quality tracking
+- PDF reports and CSV/JSON export
 - Telugu / English language support
-- AI help chat box
+
 
 ---
 
