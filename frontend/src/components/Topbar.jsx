@@ -1,10 +1,13 @@
-export default function Topbar({ language, setLanguage, onLogout }) {
+export default function Topbar({
+  language,
+  setLanguage,
+  onLogout,
+  currentUser,
+}) {
   return (
     <header className="h-20 bg-white border-b border-slate-200 px-8 flex items-center justify-between sticky top-0 z-20">
       <div>
-        <h2 className="text-2xl font-bold text-slate-900">
-          SafeBirth AI
-        </h2>
+        <h2 className="text-2xl font-bold text-slate-900">SafeBirth AI</h2>
         <p className="text-sm text-slate-500">
           Modified Robson C-Section Risk Prediction & Audit Platform
         </p>
@@ -32,12 +35,18 @@ export default function Topbar({ language, setLanguage, onLogout }) {
 
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
-            DR
+            {currentUser?.role === "Admin"
+              ? "AD"
+              : currentUser?.role === "Doctor"
+              ? "DR"
+              : currentUser?.role === "Nurse/Staff"
+              ? "NS"
+              : "DA"}
           </div>
 
           <div className="hidden xl:block">
-            <p className="font-bold text-slate-900">Dr. Priya Sharma</p>
-            <p className="text-xs text-slate-500">Gynecologist</p>
+            <p className="font-bold text-slate-900">{currentUser?.name}</p>
+            <p className="text-xs text-slate-500">{currentUser?.title}</p>
           </div>
         </div>
       </div>

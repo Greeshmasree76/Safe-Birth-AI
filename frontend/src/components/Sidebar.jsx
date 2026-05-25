@@ -1,20 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { hasAccess, sidebarLinks } from "../utils/roleAccess";
 
-export default function Sidebar() {
-  const links = [
-    { name: "Dashboard", path: "/", icon: "🏠" },
-    { name: "Data Entry", path: "/data-entry", icon: "✏️" },
-    { name: "Analysis", path: "/analytics", icon: "📊" },
-    { name: "Robson Audit", path: "/audit", icon: "🧾" },
-    { name: "Reports", path: "/reports", icon: "📑" },
-    { name: "Export Data", path: "/export", icon: "⬇️" },
-    { name: "Robson Groups", path: "/robson", icon: "👥" },
-    { name: "Resources", path: "/resources", icon: "📘" },
-    { name: "Support", path: "/support", icon: "❔" },
-    { name: "Patient Records", path: "/patients", icon: "📄" },
-    { name: "Profile", path: "/profile", icon: "👩‍⚕️" },
-    { name: "Settings", path: "/settings", icon: "⚙️" },
-  ];
+export default function Sidebar({ currentUser }) {
+  const allowedLinks = sidebarLinks.filter((link) =>
+    hasAccess(currentUser?.role, link.path)
+  );
 
   return (
     <aside className="w-72 min-h-screen bg-white border-r border-slate-200 sticky top-0 overflow-y-auto">
@@ -29,8 +19,16 @@ export default function Sidebar() {
         </div>
       </div>
 
+      <div className="mx-4 mt-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+        <p className="text-xs text-slate-500">Logged in as</p>
+        <p className="font-bold text-slate-900">{currentUser?.name}</p>
+        <p className="text-sm text-blue-600 font-semibold">
+          {currentUser?.role}
+        </p>
+      </div>
+
       <nav className="p-4 space-y-2">
-        {links.map((link) => (
+        {allowedLinks.map((link) => (
           <NavLink
             key={link.path}
             to={link.path}
@@ -54,7 +52,7 @@ export default function Sidebar() {
           Robson + ML + Audit
         </p>
         <p className="text-xs text-slate-500 mt-2">
-          Full audit workflow enabled.
+          Role-based access enabled.
         </p>
       </div>
     </aside>

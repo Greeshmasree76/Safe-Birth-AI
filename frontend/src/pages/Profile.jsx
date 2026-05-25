@@ -1,25 +1,73 @@
-export default function Profile() {
+export default function Profile({ currentUser }) {
+  const capabilities = {
+    Admin: [
+      "Manage all platform modules",
+      "Access all patient records",
+      "Download reports",
+      "Export datasets",
+      "View audit dashboards",
+      "Access settings",
+    ],
+
+    Doctor: [
+      "Enter patient data",
+      "View risk prediction",
+      "Update delivery outcomes",
+      "View Robson audit",
+      "Download reports",
+      "Monitor high-risk patients",
+    ],
+
+    "Nurse/Staff": [
+      "Register patients",
+      "Enter basic clinical details",
+      "View patient records",
+      "Access resources",
+      "Submit support requests",
+    ],
+
+    "Data Analyst": [
+      "View analytics dashboard",
+      "Analyze Robson audit",
+      "Download reports",
+      "Export CSV/JSON data",
+      "Monitor data quality",
+      "Compare benchmarks",
+    ],
+  };
+
+  const list = capabilities[currentUser?.role] || [];
+
   return (
     <div className="space-y-8">
       <div>
         <h1 className="text-4xl font-bold text-slate-900">Profile</h1>
         <p className="text-slate-500 mt-2">
-          Hospital staff profile and platform access details.
+          Role-based profile and access details.
         </p>
       </div>
 
       <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
         <div className="flex items-center gap-6">
           <div className="w-24 h-24 rounded-full bg-blue-600 text-white flex items-center justify-center text-3xl font-bold">
-            DR
+            {currentUser?.role === "Admin"
+              ? "AD"
+              : currentUser?.role === "Doctor"
+              ? "DR"
+              : currentUser?.role === "Nurse/Staff"
+              ? "NS"
+              : "DA"}
           </div>
 
           <div>
             <h2 className="text-3xl font-bold text-slate-900">
-              Dr. Priya Sharma
+              {currentUser?.name}
             </h2>
-            <p className="text-slate-500">Gynecologist</p>
-            <p className="text-slate-500 mt-1">SafeBirth AI Hospital Unit</p>
+            <p className="text-slate-500">{currentUser?.title}</p>
+            <p className="text-blue-600 font-semibold mt-1">
+              {currentUser?.role}
+            </p>
+            <p className="text-slate-500 mt-1">{currentUser?.email}</p>
           </div>
         </div>
 
@@ -27,14 +75,14 @@ export default function Profile() {
           <div className="bg-slate-50 p-5 rounded-2xl">
             <p className="text-sm text-slate-500">Role</p>
             <h3 className="text-xl font-bold text-slate-900 mt-1">
-              Doctor
+              {currentUser?.role}
             </h3>
           </div>
 
           <div className="bg-slate-50 p-5 rounded-2xl">
-            <p className="text-sm text-slate-500">Access Level</p>
+            <p className="text-sm text-slate-500">Access Type</p>
             <h3 className="text-xl font-bold text-slate-900 mt-1">
-              Clinical Dashboard
+              Role-Based Access
             </h3>
           </div>
 
@@ -48,21 +96,10 @@ export default function Profile() {
       </div>
 
       <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
-        <h2 className="text-2xl font-bold mb-4">Platform Capabilities</h2>
+        <h2 className="text-2xl font-bold mb-4">Allowed Access</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[
-            "Patient data entry",
-            "Modified Robson group classification",
-            "ML-based prototype prediction",
-            "High-risk alerts",
-            "Group-wise audit analytics",
-            "Benchmark comparison",
-            "Intervention tracking",
-            "PDF reporting",
-            "Telugu/English support",
-            "Data quality monitoring",
-          ].map((item) => (
+          {list.map((item) => (
             <div
               key={item}
               className="bg-blue-50 text-blue-800 p-4 rounded-xl font-semibold"
@@ -73,11 +110,13 @@ export default function Profile() {
         </div>
       </div>
 
-      <div className="bg-red-50 text-red-700 rounded-2xl p-6">
-        <h2 className="font-bold text-xl mb-2">Clinical Disclaimer</h2>
+      <div className="bg-yellow-50 text-yellow-800 rounded-2xl p-6">
+        <h2 className="font-bold text-xl mb-2">Security Note</h2>
         <p>
-          This platform is a clinical decision-support prototype. Final delivery
-          decisions must be made by qualified healthcare professionals.
+          This version uses frontend demo authentication for project
+          demonstration. Production hospital use requires backend JWT
+          authentication, encrypted passwords, audit logs, and secure role
+          management.
         </p>
       </div>
     </div>
