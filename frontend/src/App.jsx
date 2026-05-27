@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import ChatBox from "./components/ChatBox";
 import ProtectedRoute from "./components/ProtectedRoute";
+import { setAuthToken } from "./utils/api";
 
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -22,6 +23,12 @@ import Settings from "./pages/Settings";
 import AccessDenied from "./pages/AccessDenied";
 
 function App() {
+  const savedToken = localStorage.getItem("token");
+
+  if (savedToken) {
+    setAuthToken(savedToken);
+  }
+
   const [language, setLanguage] = useState(
     localStorage.getItem("language") || "en"
   );
@@ -32,7 +39,7 @@ function App() {
   });
 
   const [loggedIn, setLoggedIn] = useState(
-    localStorage.getItem("loggedIn") === "true"
+    localStorage.getItem("loggedIn") === "true" && !!savedToken
   );
 
   const handleLanguageChange = (lang) => {
@@ -40,9 +47,12 @@ function App() {
     localStorage.setItem("language", lang);
   };
 
-  const handleLogin = (user) => {
+  const handleLogin = (user, token) => {
     localStorage.setItem("loggedIn", "true");
     localStorage.setItem("currentUser", JSON.stringify(user));
+    localStorage.setItem("token", token);
+
+    setAuthToken(token);
     setCurrentUser(user);
     setLoggedIn(true);
   };
@@ -50,6 +60,9 @@ function App() {
   const handleLogout = () => {
     localStorage.removeItem("loggedIn");
     localStorage.removeItem("currentUser");
+    localStorage.removeItem("token");
+
+    setAuthToken(null);
     setCurrentUser(null);
     setLoggedIn(false);
   };
@@ -87,7 +100,10 @@ function App() {
 
           <main className="p-8">
             <Routes>
-              <Route path="/" element={protect("/", <Dashboard language={language} />)} />
+              <Route
+                path="/"
+                element={protect("/", <Dashboard language={language} />)}
+              />
 
               <Route
                 path="/data-entry"

@@ -3,12 +3,14 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 
 const connectDB = require("./config/db");
+
+const authRoutes = require("./routes/authRoutes");
 const patientRoutes = require("./routes/patientRoutes");
 const interventionRoutes = require("./routes/interventionRoutes");
 
-dotenv.config();
+const seedDemoUsers = require("./utils/seedDemoUsers");
 
-connectDB();
+dotenv.config();
 
 const app = express();
 
@@ -19,8 +21,13 @@ app.get("/", (req, res) => {
   res.send("API Running");
 });
 
+app.use("/api/auth", authRoutes);
 app.use("/api/patients", patientRoutes);
 app.use("/api/interventions", interventionRoutes);
+
+connectDB().then(() => {
+  seedDemoUsers();
+});
 
 const PORT = process.env.PORT || 5000;
 
