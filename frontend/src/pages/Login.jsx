@@ -1,4 +1,7 @@
 import { useState } from "react";
+import axios from "axios";
+
+import { AUTH_API } from "../utils/api";
 import { users } from "../utils/roleAccess";
 import { translations } from "../utils/translations";
 
@@ -6,9 +9,23 @@ export default function Login({ onLogin, language, setLanguage }) {
   const t = translations[language];
 
   const [selectedRole, setSelectedRole] = useState("doctor");
-  const [email, setEmail] = useState(users.doctor.email);
-  const [password, setPassword] = useState(users.doctor.password);
+  const [mode, setMode] = useState("login");
+
+  const [loginData, setLoginData] = useState({
+    email: users.doctor.email,
+    password: users.doctor.password,
+  });
+
+  const [registerData, setRegisterData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const roleCards = [
     {
@@ -47,21 +64,121 @@ export default function Login({ onLogin, language, setLanguage }) {
 
   const selectRole = (roleKey) => {
     setSelectedRole(roleKey);
-    setEmail(users[roleKey].email);
-    setPassword(users[roleKey].password);
     setError("");
+    setSuccess("");
+
+    if (mode === "login") {
+      setLoginData({
+        email: users[roleKey].email,
+        password: users[roleKey].password,
+      });
+    }
+
+    if (mode === "register") {
+      setRegisterData({
+        name: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+    }
   };
 
-  const handleSubmit = (e) => {
+  const switchMode = (newMode) => {
+    setMode(newMode);
+    setError("");
+    setSuccess("");
+
+    if (newMode === "login") {
+      setLoginData({
+        email: users[selectedRole].email,
+        password: users[selectedRole].password,
+      });
+    }
+
+    if (newMode === "register") {
+      setRegisterData({
+        name: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+    }
+  };
+
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    const user = users[selectedRole];
+    setError("");
+    setSuccess("");
+    setLoading(true);
 
-    if (email === user.email && password === user.password) {
-      onLogin(user);
-    } else {
-      setError("Invalid login details for selected role");
+    try {
+      const selectedUserRole = users[selectedRole];
+
+      const res = await axios.post(`${AUTH_API}/login`, {
+        email: loginData.email,
+        password: loginData.password,
+        role: selectedUserRole.role,
+      });
+
+      onLogin(res.data.user, res.data.token);
+    } catch (error) {
+      setError(error.response?.data?.message || "Login failed");
     }
+
+    setLoading(false);
+  };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    setError("");
+    setSuccess("");
+    setLoading(true);
+
+    try {
+      const selectedUserRole = users[selectedRole];
+
+      if (!registerData.name.trim()) {
+        setError("Name is required");
+        setLoading(false);
+        return;
+      }
+
+      if (!registerData.email.trim()) {
+        setError("Email is required");
+        setLoading(false);
+        return;
+      }
+
+      if (registerData.password.length < 6) {
+        setError("Password must be at least 6 characters");
+        setLoading(false);
+        return;
+      }
+
+      if (registerData.password !== registerData.confirmPassword) {
+        setError("Passwords do not match");
+        setLoading(false);
+        return;
+      }
+
+      const res = await axios.post(`${AUTH_API}/register`, {
+        name: registerData.name,
+        email: registerData.email,
+        password: registerData.password,
+        role: selectedUserRole.role,
+        title: selectedUserRole.title,
+      });
+
+      setSuccess("Registration successful. Logging you in...");
+      onLogin(res.data.user, res.data.token);
+    } catch (error) {
+      setError(error.response?.data?.message || "Registration failed");
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -87,6 +204,7 @@ export default function Login({ onLogin, language, setLanguage }) {
           {roleCards.map((role) => (
             <button
               key={role.key}
+              type="button"
               onClick={() => selectRole(role.key)}
               className={`text-left rounded-3xl p-6 border transition shadow-xl ${
                 selectedRole === role.key
@@ -101,6 +219,7 @@ export default function Login({ onLogin, language, setLanguage }) {
               </div>
 
               <h2 className="text-2xl font-bold">{role.title}</h2>
+
               <p className="text-cyan-100 mt-1">{role.subtitle}</p>
 
               <div className="mt-5 bg-black/20 p-4 rounded-2xl">
@@ -116,45 +235,174 @@ export default function Login({ onLogin, language, setLanguage }) {
               SB
             </div>
 
-            <h2 className="text-3xl font-bold mt-4">{t.loginTitle}</h2>
+            <h2 className="text-3xl font-bold mt-4">
+              {mode === "login" ? t.loginTitle : "Register Account"}
+            </h2>
 
             <p className="text-cyan-100 mt-2">
-              Logging in as{" "}
+              {mode === "login" ? "Logging in as" : "Registering as"}{" "}
               <span className="font-bold">{users[selectedRole].role}</span>
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <input
-              type="email"
-              placeholder={t.email}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 rounded-xl bg-white/20 outline-none placeholder:text-white/70"
-            />
-
-            <input
-              type="password"
-              placeholder={t.password}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-3 rounded-xl bg-white/20 outline-none placeholder:text-white/70"
-            />
-
-            {error && <p className="text-red-300 text-sm">{error}</p>}
-
-            <button className="w-full p-3 rounded-xl bg-cyan-400 text-slate-950 font-bold hover:bg-cyan-300">
-              Login as {users[selectedRole].role}
+          <div className="grid grid-cols-2 gap-3 mb-6">
+            <button
+              type="button"
+              onClick={() => switchMode("login")}
+              className={`p-3 rounded-xl font-bold ${
+                mode === "login"
+                  ? "bg-cyan-400 text-slate-950"
+                  : "bg-white/15 text-white"
+              }`}
+            >
+              Login
             </button>
-          </form>
+
+            <button
+              type="button"
+              onClick={() => switchMode("register")}
+              className={`p-3 rounded-xl font-bold ${
+                mode === "register"
+                  ? "bg-cyan-400 text-slate-950"
+                  : "bg-white/15 text-white"
+              }`}
+            >
+              Register
+            </button>
+          </div>
+
+          {mode === "login" && (
+            <form onSubmit={handleLogin} className="space-y-5">
+              <input
+                type="email"
+                placeholder={t.email}
+                value={loginData.email}
+                onChange={(e) =>
+                  setLoginData({
+                    ...loginData,
+                    email: e.target.value,
+                  })
+                }
+                className="w-full p-3 rounded-xl bg-white/20 outline-none placeholder:text-white/70"
+                required
+              />
+
+              <input
+                type="password"
+                placeholder={t.password}
+                value={loginData.password}
+                onChange={(e) =>
+                  setLoginData({
+                    ...loginData,
+                    password: e.target.value,
+                  })
+                }
+                className="w-full p-3 rounded-xl bg-white/20 outline-none placeholder:text-white/70"
+                required
+              />
+
+              {error && <p className="text-red-300 text-sm">{error}</p>}
+              {success && <p className="text-green-300 text-sm">{success}</p>}
+
+              <button
+                disabled={loading}
+                className="w-full p-3 rounded-xl bg-cyan-400 text-slate-950 font-bold hover:bg-cyan-300 disabled:bg-slate-400"
+              >
+                {loading
+                  ? "Logging in..."
+                  : `Login as ${users[selectedRole].role}`}
+              </button>
+            </form>
+          )}
+
+          {mode === "register" && (
+            <form onSubmit={handleRegister} className="space-y-5">
+              <input
+                type="text"
+                placeholder="Full Name"
+                value={registerData.name}
+                onChange={(e) =>
+                  setRegisterData({
+                    ...registerData,
+                    name: e.target.value,
+                  })
+                }
+                className="w-full p-3 rounded-xl bg-white/20 outline-none placeholder:text-white/70"
+                required
+              />
+
+              <input
+                type="email"
+                placeholder="Email"
+                value={registerData.email}
+                onChange={(e) =>
+                  setRegisterData({
+                    ...registerData,
+                    email: e.target.value,
+                  })
+                }
+                className="w-full p-3 rounded-xl bg-white/20 outline-none placeholder:text-white/70"
+                required
+              />
+
+              <input
+                type="password"
+                placeholder="Password"
+                value={registerData.password}
+                onChange={(e) =>
+                  setRegisterData({
+                    ...registerData,
+                    password: e.target.value,
+                  })
+                }
+                className="w-full p-3 rounded-xl bg-white/20 outline-none placeholder:text-white/70"
+                required
+              />
+
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                value={registerData.confirmPassword}
+                onChange={(e) =>
+                  setRegisterData({
+                    ...registerData,
+                    confirmPassword: e.target.value,
+                  })
+                }
+                className="w-full p-3 rounded-xl bg-white/20 outline-none placeholder:text-white/70"
+                required
+              />
+
+              {error && <p className="text-red-300 text-sm">{error}</p>}
+              {success && <p className="text-green-300 text-sm">{success}</p>}
+
+              <button
+                disabled={loading}
+                className="w-full p-3 rounded-xl bg-cyan-400 text-slate-950 font-bold hover:bg-cyan-300 disabled:bg-slate-400"
+              >
+                {loading
+                  ? "Registering..."
+                  : `Register as ${users[selectedRole].role}`}
+              </button>
+            </form>
+          )}
 
           <div className="mt-6 text-xs text-white/70 bg-black/20 p-4 rounded-2xl">
-            <p className="font-bold mb-2">Demo Credentials</p>
-            <p>Admin: admin@safebirth.ai / admin123</p>
-            <p>Doctor: doctor@safebirth.ai / doctor123</p>
-            <p>Nurse: nurse@safebirth.ai / nurse123</p>
-            <p>Analyst: analyst@safebirth.ai / analyst123</p>
+            <p className="font-bold mb-2">
+              {users[selectedRole].role} Demo Credential
+            </p>
+
+            <p>
+              <b>Email:</b> {users[selectedRole].email}
+            </p>
+
+            <p>
+              <b>Password:</b> {users[selectedRole].password}
+            </p>
+
+
           </div>
+
         </div>
       </div>
     </div>
