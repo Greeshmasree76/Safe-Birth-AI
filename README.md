@@ -9,9 +9,8 @@ SafeBirth AI is a deployed full-stack healthcare prototype for C-section risk pr
 ## Live Links
 
 - **Live Demo:** https://safebirthai-frontend.vercel.app/
-- **Backend API:** https://riskprediction-backend.vercel.app
-- **ML Health Check:** https://riskprediction-ml.vercel.app/health
-- **GitHub Repository:** https://github.com/Greeshmasree76/RiskPrediction
+- **Backend API:** https://safebirthai-backend.vercel.app/
+- **ML Health Check:** https://safebirthai-ml.vercel.app/
 
 ---
 ## Screenshots
